@@ -4,12 +4,16 @@
  *  Created on: May 22, 2020
  *      Author: Mahmoud
  */
+#include <util/delay.h>
 #include "../Platform/ATMEGA32_Features.h"
+#include "../LIB_BMNP/LIB_BMNP.h"
 #include "HLCD_int.h"
 
 void HLCD_Init(void)
 {
-HLCD_WriteCmd(HLCD_ClearScreen);
+DDRC=0xFF;
+DDRA=0xFF;
+HLCD_WriteCmd(HLCD_ClEARSCREEN);
 _delay_ms(40);
 HLCD_WriteCmd(0b00111100);
 _delay_ms(1);
@@ -20,7 +24,7 @@ _delay_ms(2);
 
 
 }
-void HLCD_HLCD_WriteCmd(u8 u8cmdcpy)
+void HLCD_WriteCmd(u8 u8cmdcpy)
 {
 	ClearBit(PORTA,0);
 	ClearBit(PORTA,1);
