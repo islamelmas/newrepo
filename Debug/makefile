@@ -37,6 +37,9 @@ endif
 LSS += \
 Calculator.lss \
 
+FLASH_IMAGE += \
+Calculator.hex \
+
 SIZEDUMMY += \
 sizedummy \
 
@@ -58,6 +61,12 @@ Calculator.lss: Calculator.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
+Calculator.hex: Calculator.elf
+	@echo 'Create Flash image (ihex format)'
+	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 sizedummy: Calculator.elf
 	@echo 'Invoking: Print Size'
 	-avr-size --format=avr --mcu=atmega32 Calculator.elf
@@ -66,10 +75,10 @@ sizedummy: Calculator.elf
 
 # Other Targets
 clean:
-	-$(RM) $(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) Calculator.elf
+	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) Calculator.elf
 	-@echo ' '
 
-secondary-outputs: $(LSS) $(SIZEDUMMY)
+secondary-outputs: $(LSS) $(FLASH_IMAGE) $(SIZEDUMMY)
 
 .PHONY: all clean dependents
 .SECONDARY:
