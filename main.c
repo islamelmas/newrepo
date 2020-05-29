@@ -9,6 +9,8 @@ int main() {
 	u16 sum;
 	u8 chtoint;
 	u8 i = 0;
+	u8 f = 0;
+	u8 operator;
 
 	u8 value;
 	u8 Calc_value;
@@ -20,44 +22,55 @@ int main() {
 			Calc_value = CALC_Num(value);
 			if (Calc_value == 'a') {
 				HLCD_WriteCmd(HLCD_ClEARSCREEN);
-			}
-			else {
+				f = 0;
+				i = 0;
+				sum1 = 0;
+				sum2 = 0;
+			} else if ((Calc_value == '+') || (Calc_value == '-')
+					|| (Calc_value == '*') || (Calc_value == '/')) {
 				HLCD_WriteData(Calc_value);
-				chtoint = atoi(&Calc_value);
-				arr[i] = chtoint;
-				sum=Calc_Convert_to_number(arr,i++);
+				sum1 = Calc_Convert_to_number(arr, i - 1);
+				operator = Calc_value;
+				f = 1;
+				i = 0;
+			} else if (Calc_value == '=') {
+				f = 2;
+				sum2 = Calc_Convert_to_number(arr, i - 1);
+				HLCD_GoToXY(1, 0);
+				switch (operator) {
+				case '+':
+					sum = sum1 + sum2;
+					break;
+				case '-':
+					sum = sum1 - sum2;
+					break;
+				case '*':
+					sum = sum1 * sum2;
+					break;
+				case '/':
+					sum = sum1 / sum2;
+					break;
+				default:
+					break;
+
+				}
+
 				HLCD_enuWriteNum(sum);
 
+			} else if (f == 1) {
+				HLCD_WriteData(Calc_value);
+				chtoint = atoi(&Calc_value);
+				arr[i++] = chtoint;
+			} else {
+				HLCD_WriteData(Calc_value);
+				chtoint = atoi(&Calc_value);
+				arr[i++] = chtoint;
+
 			}
+
 		}
+
 	}
-//     if((Calc_value!='=')||(Calc_value!='+')||(Calc_value!='/')||(Calc_value!='*')||(Calc_value!='-')||(Calc_value!='a'))
-//    	f=0;
-//     else if((Calc_value=='+'))
-//     {
-//    	f=1;
-//     }
-//     else if((Calc_value=='='))
-//     {
-//    	 f=2;
-//     }
-//
-//     if(f==0)
-//     {
-//    		int_value=atoi(&Calc_value);
-//    	 			int_value=int_value^i;
-//    	 			i+=10;
-//    				sum1+=int_value;
-//     }
-//     HLCD_enuWriteNum(sum1);
-//     if((Calc_value!='=')||(Calc_value!='+')||(Calc_value!='/')||(Calc_value!='*')||(Calc_value!='-'))
-//    	 fl
-//    		 {
-//    			int_value=atoi(Calc_value);
-//    			int_value=int_value^i;
-//    			i+=10;
-//    			sum1+=int_value;
-//    				  }
 
 	return 0;
 

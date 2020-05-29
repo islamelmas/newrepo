@@ -153,7 +153,7 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2506
+.text           0x00000000     0x2634
  *(.vectors)
  .vectors       0x00000000       0x54 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -361,28 +361,28 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
  .text.Calc_Convert_to_number
                 0x000022fc       0x98 ./main.o
                 0x000022fc                Calc_Convert_to_number
- .text.main     0x00002394       0x8c ./main.o
+ .text.main     0x00002394      0x1ba ./main.o
                 0x00002394                main
- .text.libgcc   0x00002420       0x28 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00002420                __udivmodhi4
- .text.libgcc   0x00002448        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00002448        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00002448        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00002448       0x38 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00002448                __prologue_saves__
- .text.libgcc   0x00002480       0x36 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00002480                __epilogue_restores__
+ .text.libgcc   0x0000254e       0x28 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x0000254e                __udivmodhi4
+ .text.libgcc   0x00002576        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00002576        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00002576        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00002576       0x38 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00002576                __prologue_saves__
+ .text.libgcc   0x000025ae       0x36 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x000025ae                __epilogue_restores__
  .text.avr-libc
-                0x000024b6       0x3c e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
-                0x000024b6                atoi
+                0x000025e4       0x3c e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+                0x000025e4                atoi
  .text.avr-libc
-                0x000024f2       0x10 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
-                0x000024f2                __mulhi_const_10
-                0x00002502                . = ALIGN (0x2)
+                0x00002620       0x10 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+                0x00002620                __mulhi_const_10
+                0x00002630                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002502        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00002502                exit
-                0x00002502                _exit
+ .fini9         0x00002630        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00002630                exit
+                0x00002630                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -401,11 +401,11 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002502        0x4 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002630        0x4 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002506                _etext = .
+                0x00002634                _etext = .
 
-.data           0x00800060       0x12 load address 0x00002506
+.data           0x00800060       0x12 load address 0x00002634
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -488,8 +488,8 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
  .bss.INT2      0x00800076        0x2 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  *(COMMON)
                 0x00800078                PROVIDE (__bss_end, .)
-                0x00002506                __data_load_start = LOADADDR (.data)
-                0x00002518                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00002634                __data_load_start = LOADADDR (.data)
+                0x00002646                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800078        0x0
                 0x00800078                PROVIDE (__noinit_start, .)
@@ -514,7 +514,7 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x27c0
+.stab           0x00000000     0x28ec
  *(.stab)
  .stab          0x00000000      0xcd8 ./HLCD/HLCD.o
  .stab          0x00000cd8      0x414 ./HKPAD/HKPAD_program.o
@@ -525,12 +525,12 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
                                 0x75c (size before relaxing)
  .stab          0x00001914      0x798 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
                                 0x7a4 (size before relaxing)
- .stab          0x000020ac      0x714 ./main.o
-                                0x90c (size before relaxing)
+ .stab          0x000020ac      0x840 ./main.o
+                                0xa38 (size before relaxing)
 
-.stabstr        0x00000000     0x1d98
+.stabstr        0x00000000     0x1db1
  *(.stabstr)
- .stabstr       0x00000000     0x1d98 ./HLCD/HLCD.o
+ .stabstr       0x00000000     0x1db1 ./HLCD/HLCD.o
 
 .stab.excl
  *(.stab.excl)
