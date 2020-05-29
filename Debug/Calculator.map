@@ -34,6 +34,10 @@ e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\li
                               e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o) (__unpack_f)
 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
                               e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o) (__fpcmp_parts_f)
+e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+                              ./main.o (atoi)
+e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+                              e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o) (__mulhi_const_10)
 
 Memory Configuration
 
@@ -149,7 +153,7 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x21ce
+.text           0x00000000     0x2506
  *(.vectors)
  .vectors       0x00000000       0x54 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -257,6 +261,8 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
                 0x000009a4                __unpack_f
  .text          0x00000a94       0xb2 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
                 0x00000a94                __fpcmp_parts_f
+ .text          0x00000b46        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+ .text          0x00000b46        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
                 0x00000b46                . = ALIGN (0x2)
  *(.text.*)
  .text.HLCD_Init
@@ -284,85 +290,99 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
                 0x00001552       0x1e ./HKPAD/HKPAD_program.o
                 0x00001552                HKPAD_Init
  .text.HKPAD_GetKeyValue
-                0x00001570      0x17e ./HKPAD/HKPAD_program.o
+                0x00001570      0x1a8 ./HKPAD/HKPAD_program.o
                 0x00001570                HKPAD_GetKeyValue
  .text.MINT_NewState
-                0x000016ee       0xee ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
-                0x000016ee                MINT_NewState
+                0x00001718       0xee ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001718                MINT_NewState
  .text.MINT_Init
-                0x000017dc       0x3e ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
-                0x000017dc                MINT_Init
+                0x00001806       0x3e ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001806                MINT_Init
  .text.MINT_INT0_CallBacK
-                0x0000181a       0x24 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
-                0x0000181a                MINT_INT0_CallBacK
+                0x00001844       0x24 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001844                MINT_INT0_CallBacK
  .text.MINT_INT1_CallBacK
-                0x0000183e       0x24 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
-                0x0000183e                MINT_INT1_CallBacK
+                0x00001868       0x24 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001868                MINT_INT1_CallBacK
  .text.MINT_INT2_CallBacK
-                0x00001862       0x24 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
-                0x00001862                MINT_INT2_CallBacK
+                0x0000188c       0x24 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x0000188c                MINT_INT2_CallBacK
  .text.__vector_1
-                0x00001886       0x5a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
-                0x00001886                __vector_1
+                0x000018b0       0x5a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x000018b0                __vector_1
  .text.__vector_2
-                0x000018e0       0x5a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
-                0x000018e0                __vector_2
+                0x0000190a       0x5a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x0000190a                __vector_2
  .text.__vector_3
-                0x0000193a       0x5a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
-                0x0000193a                __vector_3
+                0x00001964       0x5a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001964                __vector_3
  .text.MINT_0_FALLINGEDGE
-                0x00001994       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x000019be       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .text.MINT_0_RAISINGGEDGE
-                0x000019cc       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x000019f6       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .text.MINT_0_LOGICALEDGE
-                0x00001a04       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001a2e       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .text.MINT_1_FALLINGEDGE
-                0x00001a3c       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001a66       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .text.MINT_1_RAISINGEDGE
-                0x00001a74       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001a9e       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .text.MINT_1_LOGICALEDGE
-                0x00001aac       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+                0x00001ad6       0x38 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .text.MINT_2_FALLINGEDGE
-                0x00001ae4       0x2a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
- .text.MINT_2_RAISINGEDGE
                 0x00001b0e       0x2a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+ .text.MINT_2_RAISINGEDGE
+                0x00001b38       0x2a ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .text.MDIO_Int
-                0x00001b38       0x4e ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
-                0x00001b38                MDIO_Int
+                0x00001b62       0x4e ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
+                0x00001b62                MDIO_Int
  .text.MDIO_enuSetPinDir
-                0x00001b86      0x1ea ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
-                0x00001b86                MDIO_enuSetPinDir
+                0x00001bb0      0x1ea ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
+                0x00001bb0                MDIO_enuSetPinDir
  .text.MDIO_enuSetPinValue
-                0x00001d70      0x1ea ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
-                0x00001d70                MDIO_enuSetPinValue
+                0x00001d9a      0x1ea ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
+                0x00001d9a                MDIO_enuSetPinValue
  .text.MDIO_enuGetPinValue
-                0x00001f5a      0x112 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
-                0x00001f5a                MDIO_enuGetPinValue
+                0x00001f84      0x112 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
+                0x00001f84                MDIO_enuGetPinValue
  .text.MDIO_enuSetPORTDir
-                0x0000206c       0x32 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
-                0x0000206c                MDIO_enuSetPORTDir
+                0x00002096       0x32 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
+                0x00002096                MDIO_enuSetPORTDir
  .text.MDIO_enuSetPORTValue
-                0x0000209e       0x32 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
-                0x0000209e                MDIO_enuSetPORTValue
+                0x000020c8       0x32 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
+                0x000020c8                MDIO_enuSetPORTValue
  .text.MDIO_enuGetPORTValue
-                0x000020d0       0x3a ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
-                0x000020d0                MDIO_enuGetPORTValue
- .text.main     0x0000210a       0x2a ./main.o
-                0x0000210a                main
- .text.libgcc   0x00002134       0x28 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00002134                __udivmodhi4
- .text.libgcc   0x0000215c        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000215c        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000215c        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000215c       0x38 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x0000215c                __prologue_saves__
- .text.libgcc   0x00002194       0x36 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00002194                __epilogue_restores__
-                0x000021ca                . = ALIGN (0x2)
+                0x000020fa       0x3a ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
+                0x000020fa                MDIO_enuGetPORTValue
+ .text.CALC_Num
+                0x00002134      0x146 ./main.o
+                0x00002134                CALC_Num
+ .text.pow      0x0000227a       0x82 ./main.o
+                0x0000227a                pow
+ .text.Calc_Convert_to_number
+                0x000022fc       0x98 ./main.o
+                0x000022fc                Calc_Convert_to_number
+ .text.main     0x00002394       0x8c ./main.o
+                0x00002394                main
+ .text.libgcc   0x00002420       0x28 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00002420                __udivmodhi4
+ .text.libgcc   0x00002448        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00002448        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00002448        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00002448       0x38 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00002448                __prologue_saves__
+ .text.libgcc   0x00002480       0x36 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00002480                __epilogue_restores__
+ .text.avr-libc
+                0x000024b6       0x3c e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+                0x000024b6                atoi
+ .text.avr-libc
+                0x000024f2       0x10 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+                0x000024f2                __mulhi_const_10
+                0x00002502                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000021ca        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000021ca                exit
-                0x000021ca                _exit
+ .fini9         0x00002502        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00002502                exit
+                0x00002502                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -381,11 +401,11 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000021ca        0x4 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002502        0x4 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000021ce                _etext = .
+                0x00002506                _etext = .
 
-.data           0x00800060       0x12 load address 0x000021ce
+.data           0x00800060       0x12 load address 0x00002506
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -413,6 +433,8 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
  .data          0x00800068        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
  .data          0x00800068        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
  .data          0x00800068        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x00800068        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+ .data          0x00800068        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
  *(.data*)
  .data.MINT_Init_INT0
                 0x00800068        0x3 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
@@ -458,14 +480,16 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
  .bss           0x00800072        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
  .bss           0x00800072        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
  .bss           0x00800072        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800072        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+ .bss           0x00800072        0x0 e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
  *(.bss*)
  .bss.INT0      0x00800072        0x2 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .bss.INT1      0x00800074        0x2 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  .bss.INT2      0x00800076        0x2 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
  *(COMMON)
                 0x00800078                PROVIDE (__bss_end, .)
-                0x000021ce                __data_load_start = LOADADDR (.data)
-                0x000021e0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00002506                __data_load_start = LOADADDR (.data)
+                0x00002518                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800078        0x0
                 0x00800078                PROVIDE (__noinit_start, .)
@@ -490,23 +514,23 @@ LOAD e:/embedded systems/tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/av
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x2340
+.stab           0x00000000     0x27c0
  *(.stab)
  .stab          0x00000000      0xcd8 ./HLCD/HLCD.o
- .stab          0x00000cd8      0x408 ./HKPAD/HKPAD_program.o
-                                0x5a0 (size before relaxing)
- .stab          0x000010e0       0xd8 ./CSWC_PLT_MCU_ATMEGA32/MTIMERS_Interface.h/MTIMERS_Prog.o
+ .stab          0x00000cd8      0x414 ./HKPAD/HKPAD_program.o
+                                0x5ac (size before relaxing)
+ .stab          0x000010ec       0xd8 ./CSWC_PLT_MCU_ATMEGA32/MTIMERS_Interface.h/MTIMERS_Prog.o
                                  0xe4 (size before relaxing)
- .stab          0x000011b8      0x750 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
+ .stab          0x000011c4      0x750 ./CSWC_PLT_MCU_ATMEGA32/MINT/MINT_prg.o
                                 0x75c (size before relaxing)
- .stab          0x00001908      0x798 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
+ .stab          0x00001914      0x798 ./CSWC_PLT_MCU_ATMEGA32/MDIO/MDIO_prg.o
                                 0x7a4 (size before relaxing)
- .stab          0x000020a0      0x2a0 ./main.o
-                                0x4a4 (size before relaxing)
+ .stab          0x000020ac      0x714 ./main.o
+                                0x90c (size before relaxing)
 
-.stabstr        0x00000000     0x194b
+.stabstr        0x00000000     0x1d98
  *(.stabstr)
- .stabstr       0x00000000     0x194b ./HLCD/HLCD.o
+ .stabstr       0x00000000     0x1d98 ./HLCD/HLCD.o
 
 .stab.excl
  *(.stab.excl)

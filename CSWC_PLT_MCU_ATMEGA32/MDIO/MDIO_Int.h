@@ -28,21 +28,18 @@
 #define MDIO_PULLUP 1
 #define MDIO_HIGHIMPEDANCE 0
 
-
-
 #define MDIO_OUTPUT 1
 #define MDIO_INPUT 0
 
-
 void MDIO_Int(void);
-tenumFncErrorState MDIO_enuSetPinDir(u8 MDIO_PORTNOCPY,u8 MDIO_PINNOCPY,u8 MDIO_DIR );
-tenumFncErrorState MDIO_enuSetPinValue(u8 MDIO_PORTNOCPY,u8 MDIO_PINNOCPY,u8 MDIO_Value );
-tenumFncErrorState MDIO_enuGetPinValue(u8 MDIO_PORTNOCPY,u8 MDIO_PINNOCPY,pu8 MDIO_Value );
-tenumFncErrorState MDIO_enuSetPORTDir(u8 MDIO_PORTNOCPY,u8 MDIO_DIR );
-tenumFncErrorState MDIO_enuSetPORTValue(u8 MDIO_PORTNOCPY,u8 MDIO_Value );
-tenumFncErrorState MDIO_enuGetPORTValue(u8 MDIO_PORTNOCPY,pu8 MDIO_Value );
-
-
-
+tenumFncErrorState MDIO_enuSetPinDir(u8 MDIO_PORTNOCPY, u8 MDIO_PINNOCPY,
+		u8 MDIO_DIR);
+tenumFncErrorState MDIO_enuSetPinValue(u8 MDIO_PORTNOCPY, u8 MDIO_PINNOCPY,
+		u8 MDIO_Value);
+tenumFncErrorState MDIO_enuGetPinValue(u8 MDIO_PORTNOCPY, u8 MDIO_PINNOCPY,
+		pu8 MDIO_Value);
+tenumFncErrorState MDIO_enuSetPORTDir(u8 MDIO_PORTNOCPY, u8 MDIO_DIR);
+tenumFncErrorState MDIO_enuSetPORTValue(u8 MDIO_PORTNOCPY, u8 MDIO_Value);
+tenumFncErrorState MDIO_enuGetPORTValue(u8 MDIO_PORTNOCPY, pu8 MDIO_Value);
 
 #endif /* CSWC_PLT_MCU_ATMEGA32_MDIO_MDIO_INT_H_ */
